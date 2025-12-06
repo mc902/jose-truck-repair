@@ -1,10 +1,136 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>JOSE Truck Repair</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6b0000, #111);
+            padding: 25px 15px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        header h1 span {
+            color: #ffcc00;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .cta-box {
+            margin-top: 18px;
+            display: inline-block;
+            padding: 10px 18px;
+            border-radius: 6px;
+            background: #222;
+            border: 1px solid #ffcc00;
+        }
+
+        .cta-box strong {
+            color: #ffcc00;
+        }
+
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px 15px 40px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background: #1b1b1b;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.3rem;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        ul li {
+            padding: 4px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px 25px;
+        }
+
+        .service-item::before {
+            content: "✔ ";
+            color: #ffcc00;
+        }
+
+        .contact-phone {
+            font-size: 1.4rem;
+            margin: 10px 0;
+        }
+
+        .contact-phone a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-top: 5px;
+            color: #bbbbbb;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #d0d0d0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #222;
+        }
+
+        @media (min-width: 700px) {
+            header h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -20,24 +146,9 @@
         </p>
     </div>
 </header>
-    <header>
-    <img src="logo.png" alt="Jose Truck Repair Logo" class="logo">
-
-    <h1>JOSE <span>TRUCK REPAIR</span></h1>
-    <p>Mecánico de camiones – Road & Shop Service</p>
-
-    <div class="cta-box">
-        <p><strong>📲 TEXT FIRST PARA CITA</strong></p>
-        <p>Envíanos un mensaje con tu nombre, camión y problema.</p>
-        <p class="contact-phone">
-            Tel / Text / WhatsApp:
-            <a href="sms:+17873635903">787-363-5903</a>
-        </p>
-    </div>
-</header>
-
 
 <main>
+    <!-- SERVICES -->
     <section id="services">
         <h2>Servicios / Services</h2>
         <div class="services-grid">
@@ -48,22 +159,31 @@
             <div class="service-item">A/C – Aire acondicionado</div>
             <div class="service-item">Preventive maintenance / Mantenimiento</div>
         </div>
-        <p class="tagline">From small issues to big breakdowns – aquí te dejamos el camión ready.</p>
+        <p class="tagline">
+            From small issues to big breakdowns – aquí te dejamos el camión ready.
+        </p>
     </section>
 
+    <!-- HOW TO MAKE APPOINTMENT -->
     <section id="appointments">
         <h2>Cómo hacer tu cita / How to book</h2>
-        <ol class="steps">
+        <ol style="margin-left: 16px; margin-top: 8px;">
             <li>📩 <strong>Text first:</strong> manda mensaje al <strong>787-363-5903</strong>.</li>
             <li>✍️ Incluye: nombre, modelo del truck, y problema (en español o inglés).</li>
             <li>📅 Te respondemos con hora disponible y ubicación.</li>
         </ol>
-        <p class="note">Walk-ins son bienvenidos cuando se pueda, pero <strong>text primero es mejor</strong> para asegurar tu turno.</p>
+        <p class="note">
+            Walk-ins son bienvenidos cuando se pueda, pero <strong>text primero es mejor</strong> para asegurar tu turno.
+        </p>
     </section>
 
+    <!-- AREAS WE SERVE -->
     <section id="areas">
         <h2>Áreas que Servimos / Areas We Serve</h2>
-        <ul class="areas-list">
+        <p>
+            Ofrecemos servicio móvil y en taller en las siguientes ciudades:
+        </p>
+        <ul style="margin-top: 10px;">
             <li>✔ Marietta</li>
             <li>✔ Hiram</li>
             <li>✔ Lithia Springs</li>
@@ -72,18 +192,35 @@
             <li>✔ Villa Rica</li>
             <li>✔ Powder Springs</li>
         </ul>
+        <p class="tagline">
+            Si estás cerca de estas áreas, textéanos — llegamos donde estés.
+        </p>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
         <h2>Sobre Nosotros / About Us</h2>
-        <p>En <strong>Jose Truck Repair</strong> trabajamos full con camiones de carga.</p>
+        <p>
+            En <strong>Jose Truck Repair</strong> trabajamos full con camiones de carga.
+            Hacemos diagnóstico rápido, explicamos el problema en Spanglish 😉
+            y solo recomendamos lo que de verdad necesita tu unidad.
+        </p>
+        <p style="margin-top: 8px;">
+            Servimos orgullosamente <strong>Marietta, Hiram, Lithia Springs, Dallas, Douglasville, Villa Rica y Powder Springs</strong>.
+            Si estás en estas áreas o alrededor, <strong>llámanos o mándanos texto</strong> y buscamos la mejor manera de ayudarte.
+        </p>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
         <h2>Contacto / Contact</h2>
         <p class="contact-phone">
             📞 Tel / Text / WhatsApp: 
             <a href="tel:+17873635903">787-363-5903</a>
+        </p>
+        <p class="note">
+            Horario flexible – textéanos para confirmar.  
+            Inglés, Español, Spanglish… como tú quieras hablar.
         </p>
     </section>
 </main>
@@ -93,7 +230,7 @@
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
