@@ -1,3 +1,9 @@
+.logo {
+    width: 280px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto 15px auto;
+}
 *{box-sizing:border-box;margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;}
 body{background:#111;color:#f5f5f5;}
 header{background:linear-gradient(135deg,#6b0000,#111);padding:25px 15px 30px;text-align:center;}
